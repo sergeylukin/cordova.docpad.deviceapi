@@ -41,11 +41,8 @@ app =
   
   # Update DOM on a Received Event
   receivedEvent: (id) ->
-    parentElement = document.getElementById(id)
-    listeningElement = parentElement.querySelector(".listening")
-    receivedElement = parentElement.querySelector(".received")
-    listeningElement.setAttribute "style", "display:none;"
-    receivedElement.setAttribute "style", "display:block;"
-    console.log "Received Event: " + id
+    document.write window.device.name
+    document.write window.device.model
+    document.write window.device.platform
 
 app.initialize()
